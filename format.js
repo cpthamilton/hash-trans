@@ -34,7 +34,7 @@ const filteredSet =[ ...new Set(outItems)];
 const filtered = Array.from(filteredSet);
 
 const rands = [];
-for (let i = 0; i < (256 * 3); i++) {
+/*for (let i = 0; i < (256 * 3); i++) {
   let rand;
   while (!rand) {
     rand = Math.floor(Math.random() * Math.floor(filtered.length));
@@ -46,5 +46,6 @@ for (let i = 0; i < (256 * 3); i++) {
 }
 
 const toInclude = rands.map(r => filtered[r]);
-
+*/
+const toInclude = filtered;
 fs.writeFileSync(outPath, toInclude.join('\n'));
